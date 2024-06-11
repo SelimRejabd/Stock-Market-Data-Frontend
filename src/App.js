@@ -1,18 +1,21 @@
-import React from 'react';
-import './styles/tailwind.css';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import HomeScreen from './Screens/HomeScreen';
+import React from "react";
+import "./styles/tailwind.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomeScreen from "./Screens/HomeScreen";
+import AddStockScreen from "./Screens/AddStockScreen";
+import EditStockScreen from "./Screens/EditStockScreen";
 
 
 function App() {
-    return (
-        <Provider store={store}>
-            <div className="App">
-                <HomeScreen />
-            </div>
-        </Provider>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/add-stock" element={<AddStockScreen />} />
+        <Route path="/update/:id" element={<EditStockScreen />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
