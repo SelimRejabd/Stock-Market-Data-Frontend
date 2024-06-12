@@ -1,16 +1,19 @@
 # Janata WiFi Task - Frontend
 
-This repository contains the frontend code for the Janata WiFi Task project. 
+This repository contains the frontend code for the Janata WiFi Task project.
 
 ## Project Overview
 
-Fetch stocks data  through api and show data in web browser using REACT. 
+Fetch stocks data through api and show data in web browser using REACT.
 
 ## Features
 
 - Homepage for table visualization of stocks data
 - Add new stock data page
 - Edit stock data page
+- Delete stock data
+- Button for Next & Preveous page
+- Go to page with page number
 - User-friendly interface with intuitive design
 
 ## Installation
@@ -20,7 +23,7 @@ To run the frontend locally, follow these steps:
 1. Clone the repository: `git clone https://github.com/SelimRejabd/Stock-Market-Data-Frontend`
 2. Navigate to the project directory: `cd Stock-Market-Data-Frontend`
 3. Install the dependencies: `npm install`
-    [If any error use node version 20.6.1]
+   [If any error use node version 20.6.1]
 4. Start the development server: `npm start`
 
 ## Contributing
