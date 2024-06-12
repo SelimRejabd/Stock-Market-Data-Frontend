@@ -45,7 +45,9 @@ export const addStockData = createAsyncThunk(
 export const updateStockData = createAsyncThunk(
   "stocks/updateStockData",
   async (stockData) => {
-    const response = await axios.put(`/api/stocks-data/update/${stockData.id}/`, stockData,
+    const response = await axios.put(
+      `/api/stocks-data/update/${stockData.id}/`,
+      stockData,
       {
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +61,7 @@ export const updateStockData = createAsyncThunk(
 export const deleteStockData = createAsyncThunk(
   "stocks/deleteStockData",
   async (id) => {
-    axios.delete(`/api/stocks-data/delete/${id}`)
+    axios.delete(`/api/stocks-data/delete/${id}`);
     return { id };
   }
 );
@@ -116,7 +118,7 @@ const stockSlice = createSlice({
       })
       .addCase(addStockData.fulfilled, (state, action) => {
         state.stockData.push(action.payload);
-        state.successMessage = 'Data added successfully!';
+        state.successMessage = "Data added successfully!";
       })
       .addCase(addStockData.rejected, (state, action) => {
         state.error = action.error.message;
@@ -129,13 +131,13 @@ const stockSlice = createSlice({
           (stock) => stock.id === action.payload.id
         );
         state.stockData[index] = action.payload;
-        state.successMessage = 'Data updated successfully!';
+        state.successMessage = "Data updated successfully!";
       })
       .addCase(deleteStockData.fulfilled, (state, action) => {
         state.stockData = state.stockData.filter(
           (stock) => stock.id !== action.payload.id
         );
-        state.successMessage = 'Data deleted successfully!';
+        state.successMessage = "Data deleted successfully!";
       })
       .addCase(deleteStockData.rejected, (state, action) => {
         state.error = action.error.message;

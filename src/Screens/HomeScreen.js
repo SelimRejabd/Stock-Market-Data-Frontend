@@ -48,7 +48,7 @@ const HomeScreen = () => {
   };
 
   const handleDeleteStock = (id) => {
-    if (window.confirm("Are you sure you want to delete this book?")) {
+    if (window.confirm("Are you sure you want to delete this data?")) {
       dispatch(deleteStockData(id));
     }
   };

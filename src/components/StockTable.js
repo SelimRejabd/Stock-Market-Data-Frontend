@@ -36,23 +36,23 @@ const StockTable = ({ data, onDelete }) => {
         <tbody className="bg-white divide-y divide-gray-200">
           {data.map((stock, index) => (
             <tr key={index}>
-              <td className="px-6 py-4 whitespace-nowrap">{stock.date}</td>
-              <td className="px-6 py-4 whitespace-nowrap">
+              <td className="px-1 py-1 whitespace-nowrap">{stock.date}</td>
+              <td className="px-1 py-1 whitespace-nowrap">
                 {stock.trade_code}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap">{stock.high}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{stock.low}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{stock.open}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{stock.close}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{stock.volume}</td>
-              <td className="px-6 py-4 whitespace-nowrap">
+              <td className="px-1 py-1 whitespace-nowrap">{stock.high}</td>
+              <td className="px-1 py-1 whitespace-nowrap">{stock.low}</td>
+              <td className="px-1 py-1 whitespace-nowrap">{stock.open}</td>
+              <td className="px-1 py-1 whitespace-nowrap">{stock.close}</td>
+              <td className="px-1 py-1 whitespace-nowrap">{stock.volume}</td>
+              <td className="px-1 py-1 whitespace-nowrap">
                 <Link to={`/update/${stock.id}`}>
-                  <button className="bg-yellow-500 text-white px-4 py-2 rounded mr-2">
+                  <button className="bg-yellow-500 text-white px-1 py-1 rounded mr-2">
                     Edit
                   </button>
                 </Link>
                 <button
-                  className="bg-red-500 text-white px-4 py-2 rounded"
+                  className="bg-red-500 text-white px-1 py-1 rounded"
                   onClick={() => onDelete(stock.id)}
                 >
                   Delete
